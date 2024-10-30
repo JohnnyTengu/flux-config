@@ -8,4 +8,4 @@ spec:
     name: hello-world-app
   policy:
     semver:
-      range: 'v*'
+      range: 5.0.x

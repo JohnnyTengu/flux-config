@@ -4,5 +4,5 @@ metadata:
   name: hello-world-app
   namespace: flux-system
 spec:
-  image: johnnytengu/hello-world
+  image: ghcr.io/stefanprodan/podinfo
   interval: 1m

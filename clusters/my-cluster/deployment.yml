@@ -15,9 +15,10 @@ spec:
     spec:
       containers:
       - name: hello-world
-        image: johnnytengu/hello-world:v26 # {"$imagepolicy": "flux-system:hello-world-app-policy"} 
+        image: ghcr.io/stefanprodan/podinfo:5.0.0  # {"$imagepolicy": "flux-system:hello-world-app-policy"}
         ports:
-        - containerPort: 8080
+        - containerPort: 9898
+          protocol: TCP
 
 ---
 apiVersion: v1
@@ -31,7 +32,7 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 8080
+      targetPort: 9898
   type: ClusterIP
 ---
 apiVersion: networking.k8s.io/v1
@@ -52,4 +53,3 @@ spec:
                 name: hello-world-service
                 port:
                   number: 80
-
