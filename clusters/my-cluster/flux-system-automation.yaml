@@ -11,13 +11,13 @@ spec:
         branch: main
     commit:
       author:
-        email: fluxcdbot@users.noreply.github.com
-        name: fluxcdbot
+#        email: fluxcdbot@users.noreply.github.com
+        name: k.larin
       messageTemplate: '{{range .Changed.Changes}}{{print .OldValue}} -> {{println
         .NewValue}}{{end}}'
     push:
       branch: main
-  interval: 30m0s
+  interval: 1m0s
   sourceRef:
     kind: GitRepository
     name: flux-system
