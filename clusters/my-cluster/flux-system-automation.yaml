@@ -20,7 +20,7 @@ spec:
   interval: 30m0s
   sourceRef:
     kind: GitRepository
-    name: flux-config
+    name: flux-system
   update:
     path: ./clusters/my-cluster
     strategy: Setters
